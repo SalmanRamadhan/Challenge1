@@ -7,22 +7,22 @@ class SuitJepang (
             println("Draw")
         }
         else if (pemain1.uppercase() == "GUNTING" && pemain2.uppercase() == "BATU") {
-            println("pemain2 menang")
+            println("pemain 2 menang")
         }
         else if (pemain1.uppercase() == "GUNTING" && pemain2.uppercase() == "KERTAS") {
-            println("pemain1 menang")
+            println("pemain 1 menang")
         }
         else if (pemain1.uppercase() == "BATU" && pemain2.uppercase() == "KERTAS") {
-            println("pemain2 menang")
+            println("pemain 2 menang")
         }
         else if (pemain1.uppercase() == "BATU" && pemain2.uppercase() == "GUNTING") {
-            println("pemain2 menang")
+            println("pemain 2 menang")
         }
         else if (pemain1.uppercase() == "KERTAS" && pemain2.uppercase() == "BATU") {
-            println("pemain1 menang")
+            println("pemain 1 menang")
         }
         else if (pemain1.uppercase() == "KERTAS" && pemain2.uppercase() == "GUNTING") {
-            println("pemain2 menang")
+            println("pemain 2 menang")
         }
     }
 }
