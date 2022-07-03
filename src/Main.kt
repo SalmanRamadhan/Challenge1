@@ -86,7 +86,13 @@ fun mainSuitJepang(){
             println("input pemain 1 salah, harap input batu, gunting, kertas")
             false
         }
-            else !(pemain2.uppercase() != "BATU" && pemain2.uppercase() != "GUNTING" && pemain2.uppercase() != "KERTAS")
+            else if(pemain2.uppercase() != "BATU" && pemain2.uppercase() != "GUNTING" && pemain2.uppercase() != "KERTAS") {
+            println("input pemain 2 salah, harap input batu, gunting, kertas")
+            false
+        }else{
+            true
+        }
+
 
         }while (!statusSuit)
 
