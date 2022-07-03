@@ -4,7 +4,7 @@ class Hopimpa(
     var pemain3: String
 ) {
 
-    fun play(pemain1: String,pemain2: String,pemain3: String) {
+    fun play() {
 
         var counterHitam = 0
         var counterPutih = 0
@@ -14,25 +14,44 @@ class Hopimpa(
         val arraypemain = arrayOf(pemain1,pemain2,pemain3)
 
         for(item in arraypemain.indices){
-            if(arraypemain[item] == "hitam"){
+            if(arraypemain[item].uppercase() == "HITAM"){
                 counterHitam+=1
-                pemainHitam.add("pemain ${item+1}")
+                pemainHitam.add("Pemain ${item+1}")
             } else {
                 counterPutih+=1
-                pemainPutih.add("pemain ${item+1}")
+                pemainPutih.add("Pemain ${item+1}")
 
             }
         }
 
-        if(counterPutih < counterHitam){
-            println("pemain putih keluar")
+        when{
+            counterHitam == counterPutih -> {
+                println("Tidak ada pemain yang keluar")
+            }
+            counterHitam > counterPutih -> {
+                println("Pemain putih keluar")
+                println(pemainPutih)
+            }
+            counterHitam < counterPutih ->{
+                println("Pemain hitam keluar")
+                println(pemainHitam)
+            }
+            counterHitam == 3 || counterPutih == 3 -> {
+                println("Tidak ada pemain yang keluar")
+            }
+        }
+
+
+
+       /* if(counterPutih < counterHitam){
+            println("Pemain putih keluar")
             println(pemainPutih)
         } else if(counterHitam < counterPutih){
-            println("pemain hitam keluar")
+            println("Pemain hitam keluar")
             println(pemainHitam)
         } else {
-            println("draw")
-        }
+            println("Draw")
+        }*/
 
     }
 
