@@ -4,7 +4,7 @@ class Hopimpa(
     var pemain3: String
 ) {
 
-    fun play(pemain1: String,pemain2: String,pemain3: String) {
+    fun play() {
 
         var counterHitam = 0
         var counterPutih = 0
@@ -14,7 +14,7 @@ class Hopimpa(
         val arraypemain = arrayOf(pemain1,pemain2,pemain3)
 
         for(item in arraypemain.indices){
-            if(arraypemain[item] == "hitam"){
+            if(arraypemain[item] == "Hitam"){
                 counterHitam+=1
                 pemainHitam.add("pemain ${item+1}")
             } else {
