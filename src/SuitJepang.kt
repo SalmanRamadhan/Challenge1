@@ -2,7 +2,7 @@ class SuitJepang (
     var pemain1: String,
     var pemain2: String
         ) {
-    fun suit(pemain1: String, pemain2: String) {
+    fun suit() {
         if (pemain1 == pemain2) {
             println("Draw")
         }
