@@ -63,7 +63,6 @@ fun hompimpaPlay(input: String){
 
     }while (!status)
 
-
     var hopimpa = Hopimpa(pemain1,pemain2,pemain3)
     hopimpa.play()
 

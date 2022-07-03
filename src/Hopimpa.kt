@@ -28,6 +28,9 @@ class Hopimpa(
             counterHitam == counterPutih -> {
                 println("Tidak ada pemain yang keluar")
             }
+            counterHitam == 3 || counterPutih == 3 -> {
+                println("Tidak ada pemain yang keluar")
+            }
             counterHitam > counterPutih -> {
                 println("Pemain putih keluar")
                 println(pemainPutih)
@@ -36,9 +39,7 @@ class Hopimpa(
                 println("Pemain hitam keluar")
                 println(pemainHitam)
             }
-            counterHitam == 3 || counterPutih == 3 -> {
-                println("Tidak ada pemain yang keluar")
-            }
+
         }
 
 
