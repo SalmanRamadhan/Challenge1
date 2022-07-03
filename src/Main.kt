@@ -28,7 +28,7 @@ fun main(){
 
         when(input){
             "1"  -> hompimpaPlay(input)
-            "2"  -> println("pilihan 2")
+            "2"  -> mainSuitJepang()
         }
 
 }
@@ -65,6 +65,35 @@ fun hompimpaPlay(input: String){
 
     var hopimpa = Hopimpa(pemain1,pemain2,pemain3)
     hopimpa.play()
+
+}
+fun mainSuitJepang(){
+
+    println("Pilihan : 2")
+    println("Mulai bermain : ")
+
+    var pemain1 = ""
+    var pemain2 = ""
+
+    do {
+        var statusSuit = true
+        println("1. Masukan pemain 1 : ")
+        pemain1 = readLine().toString()
+        println("2. Masukan pemain 2 : ")
+        pemain2 = readLine().toString()
+
+        statusSuit = if (pemain1.uppercase() != "BATU" && pemain1.uppercase() != "GUNTING" && pemain1.uppercase() != "KERTAS") {
+            println("input pemain 1 salah, harap input batu, gunting, kertas")
+            false
+        }
+            else !(pemain2.uppercase() != "BATU" && pemain2.uppercase() != "GUNTING" && pemain2.uppercase() != "KERTAS")
+
+        }while (!statusSuit)
+
+
+    var suitJepang = SuitJepang(pemain1, pemain2)
+    suitJepang.suit()
+
 
 }
 
